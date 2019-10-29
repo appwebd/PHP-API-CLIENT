@@ -23,14 +23,13 @@ $serviceName = "payment/createEmail";
 
 try {
 	$flowApi = new FlowApi;
-	
+
 	$response = $flowApi->send($serviceName, $params,"POST");
-	
+
 	print_r($response);
-	
-	
+
+
 } catch (Exception $e) {
 	echo $e->getCode() . " - " . $e->getMessage();
 }
 
-?>

@@ -39,4 +39,3 @@ try {
 	echo $e->getCode() . " - " . $e->getMessage();
 }
 
-?>
