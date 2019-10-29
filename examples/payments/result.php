@@ -20,11 +20,10 @@ try {
 	$serviceName = "payment/getStatus";
 	$flowApi = new FlowApi();
 	$response = $flowApi->send($serviceName, $params, "GET");
-	
+
 	print_r($response);
-	
+
 } catch (Exception $e) {
 	echo "Error: " . $e->getCode() . " - " . $e->getMessage();
 }
 
-?>
