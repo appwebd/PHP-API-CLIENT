@@ -23,15 +23,18 @@ class FlowApi {
 		$this->apiKey = Config::get("APIKEY");
 		$this->secretKey = Config::get("SECRETKEY");
 	}
-	
-	
-	/**
-	 * Funcion que invoca un servicio del Api de Flow
-	 * @param string $service Nombre del servicio a ser invocado
-	 * @param array $params datos a ser enviados
-	 * @param string $method metodo http a utilizar
-	 * @return string en formato JSON
-	 */
+
+
+    /**
+     * Funcion que invoca un servicio del Api de Flow
+     *
+     * @param string $service Nombre del servicio a ser invocado
+     * @param array  $params  datos a ser enviados
+     * @param string $method  metodo http a utilizar
+     *
+     * @return string en formato JSON
+     * @throws Exception
+     */
 	public function send( $service, $params, $method = "GET") {
 		$method = strtoupper($method);
 		$url = Config::get("APIURL") . "/" . $service;
