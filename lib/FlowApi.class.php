@@ -64,7 +64,7 @@ class FlowApi
     /**
      * Funcion que firma los parametros
      *
-     * @param string $params Parametros a firmar
+     * @param array $params Parametros a firmar
      *
      * @return string de firma
      * @throws Exception
