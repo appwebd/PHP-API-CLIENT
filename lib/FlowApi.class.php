@@ -63,13 +63,16 @@ class FlowApi {
 		$this->apiKey = $apiKey;
 		$this->secretKey = $secretKey;
 	}
-	
-	
-	/**
-	 * Funcion que firma los parametros
-	 * @param string $params Parametros a firmar
-	 * @return string de firma
-	 */
+
+
+    /**
+     * Funcion que firma los parametros
+     *
+     * @param string $params Parametros a firmar
+     *
+     * @return string de firma
+     * @throws Exception
+     */
 	private function sign($params) {
 		$keys = array_keys($params);
 		sort($keys);
@@ -82,15 +85,18 @@ class FlowApi {
 		}
 		return hash_hmac('sha256', $toSign , $this->secretKey);
 	}
-	
-	
-	/**
-	 * Funcion que hace el llamado via http GET
-	 * @param string $url url a invocar
-	 * @param array $data datos a enviar
-	 * @param string $sign firma de los datos
-	 * @return string en formato JSON 
-	 */
+
+
+    /**
+     * Funcion que hace el llamado via http GET
+     *
+     * @param string $url  url a invocar
+     * @param array  $data datos a enviar
+     * @param string $sign firma de los datos
+     *
+     * @return string en formato JSON
+     * @throws Exception
+     */
 	private function httpGet($url, $params) {
 		$url = $url . "?" . http_build_query($params);
 		$ch = curl_init();
@@ -105,14 +111,17 @@ class FlowApi {
 		curl_close($ch);
 		return array("output" =>$output, "info" => $info);
 	}
-	
-	/**
-	 * Funcion que hace el llamado via http POST
-	 * @param string $url url a invocar
-	 * @param array $data datos a enviar
-	 * @param string $sign firma de los datos
-	 * @return string en formato JSON 
-	 */
+
+    /**
+     * Funcion que hace el llamado via http POST
+     *
+     * @param string $url  url a invocar
+     * @param array  $data datos a enviar
+     * @param string $sign firma de los datos
+     *
+     * @return string en formato JSON
+     * @throws Exception
+     */
 	private function httpPost($url, $params ) {
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
