@@ -21,7 +21,14 @@ $COMMERCE_CONFIG = array(
 
 class Config
 {
-
+    /**
+     * Get item of structure $commerce_config
+     *
+     * @param string $name
+     *
+     * @return mixed
+     * @throws Exception
+     */
     static function get($name)
     {
         global $COMMERCE_CONFIG;

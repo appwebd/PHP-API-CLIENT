@@ -33,5 +33,5 @@ try {
 
 
 } catch (Exception $e) {
-    echo "Error: " . $e->getCode() . " - " . $e->getMessage();
+    echo 'Error: ' , $e->getCode() , ' - ' , $e->getMessage();
 }

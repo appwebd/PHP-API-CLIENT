@@ -24,8 +24,14 @@ class FlowApi
 
     public function __construct()
     {
-        $this->apiKey = Config::get("APIKEY");
-        $this->secretKey = Config::get("SECRETKEY");
+
+        try {
+            $this->apiKey = Config::get("APIKEY");
+            $this->secretKey = Config::get("SECRETKEY");
+        } catch (Exception $e) {
+            echo $e->getCode(), ' ', $e->getMessage();
+        }
+
     }
 
 
