@@ -48,6 +48,6 @@ try {
     $redirect = $response["url"] . "?token=" . $response["token"];
     header("location:$redirect");
 } catch (Exception $e) {
-    echo $e->getCode() . " - " . $e->getMessage();
+    echo 'Error: ' , $e->getCode() , ' - ' , $e->getMessage();
 }
 

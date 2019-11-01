@@ -51,7 +51,7 @@ $optional = json_encode($optional);
 
 //Prepara el arreglo de datos
 $params = array(
-	"commerceOrder" => rand(1100,2000),
+	"commerceOrder" => random_int(1100,2000),
 	"subject" => "Pago de prueba",
 	"currency" => "CLP",
 	"amount" => 5000,
