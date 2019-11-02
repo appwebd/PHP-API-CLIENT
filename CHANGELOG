@@ -1,3 +1,18 @@
+f338b7b Fri Nov 1 12:12:40 2019 -0300 Merge pull request #6 from appwebd/general
+a54e920 Fri Nov 1 12:10:21 2019 -0300 Error handling, PHPDoc.
+ca9250f Fri Nov 1 11:49:49 2019 -0300 Merge pull request #5 from appwebd/bug_security_hotspot
+341f5e3 Fri Nov 1 11:46:57 2019 -0300 security hotspot CVE-2006-3419 (Using pseudorandom number generators (PRNGs) is security-sensitive)
+d3ac405 Tue Oct 29 23:30:32 2019 -0300 Merge pull request #4 from appwebd/bug_type_compatibility
+a6e3482 Tue Oct 29 23:29:04 2019 -0300 type compatibility : https://www.php.net/manual/en/language.types.string.php
+5cb9b6e Tue Oct 29 23:01:09 2019 -0300 Merge pull request #3 from appwebd/PHPDoc
+ae7d038 Tue Oct 29 22:57:57 2019 -0300 PHPDoc for non-existing argument,  Return type does not march
+dda933a Tue Oct 29 21:10:57 2019 -0300 was added Missing throws tags
+023bd3f Tue Oct 29 21:07:53 2019 -0300 was added Missing throws tags
+b87b056 Tue Oct 29 20:58:06 2019 -0300 Merge pull request #2 from appwebd/bug_code_style
+2991534 Tue Oct 29 20:53:04 2019 -0300 fixed redundant closing tag
+d727818 Tue Oct 29 20:33:47 2019 -0300 Merge pull request #1 from appwebd/caracteristica_unificar_mensajes
+fbb621d Tue Oct 29 19:59:44 2019 -0300 Unification of messages to English (they should be to spanish in production platform?).
+de5e321 Tue Oct 29 19:50:10 2019 -0300 was added Change Log
 af34b4d Tue Oct 29 19:26:53 2019 -0300 Initial commit
 1b79039 Fri Oct 11 14:19:47 2019 -0300 Update FlowApi.class.php
 36810f9 Fri Jul 26 13:13:43 2019 -0400 Revert "Update FlowApi.class.php"
