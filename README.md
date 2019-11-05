@@ -9,7 +9,7 @@ Cliente PHP para consumir el API de Flow.
 * php_openssl activado
 
 ## Instalación
-Baje la última versión y copie los archivos en su servidor.
+Como ejemplo del uso de esta API-REST, baje la última versión de https://github.com/flowcl/PHP-API-CLIENT y copie los archivos en su servidor.
 
 ## Documentación
 La documentación completa del API REST de Flow la encuentrá aquí: https://www.flow.cl/docs/api.html
@@ -17,15 +17,33 @@ La documentación completa del API REST de Flow la encuentrá aquí: https://www
 ## Comenzando
 ### Configurando el cliente
 Configure correctamente el cliente en el archivo **lib/Config.class.php**.
-Lo primero que debe configurar es su apiKey y secretKey del comercio registrado en Flow. Esto lo obtiene en la sección **Mis datos** acceda a https://www.flow.cl, una vez autenticado con su cuenta Flow, seleccione Mis datos y recupere su apiKey y secretKey desde la sección Seguridad.
+Lo primero que debe configurar es su apiKey, secretKey. Para ello, acceda a https://www.flow.cl, una vez autenticado con su cuenta Flow, seleccione **Mis datos**  y recupere su apiKey y secretKey desde la sección Seguridad.
+
+| Sitio | Mi cuenta flow 	|
+|---	|---	|
+| Production  	| https://www.flow.cl/app/web/misDatos.php   	|
+| Sandbox  	| https://sandbox.flow.cl/app/web/misDatos.php  	|
+
+
+
 - **APIKEY** el apiKey obtenida desde su cuenta Flow
 - **SECRETKEY** el secretKey obtenida desde su cuenta Flow
-- **APIURL** la URL del endpoint del API de Flow, Aquí podrá configurar el endpoint de producción o del sandbox. Esta información se obtiene en la documentación del API https://www.flow.cl/docs/api.html
+- **APIURL** la URL del endpoint del API de Flow, Aquí podrá configurar el endpoint de producción o del sandbox. 
 - **BASEURL** La URL base donde instaló el cliente PHP en su servidor
+
+La URL del endpoint del API Flow, puede ser:
+
+| Sitio | mi cuenta flow 	|
+|---	|---	|
+| Production  	| https://www.flow.cl/api   	|
+| Sandbox  	| https://sandbox.flow.cl/api 	|
+
+información basada en documentación: https://www.flow.cl/docs/api.html#section/Introduccion/Acceso-al-API
+
 
 
 ```php
-$COMMERCE_CONFIG = array(
+$commerceConfig = array(
  	"APIKEY" => "1F90971E-8276-4713-97FF-2BLF5091EE3B", // Registre aquí su apiKey
  	"SECRETKEY" => "f8b45f9b8bcdb5702dc86a1b894492303741c405", // Registre aquí su secretKey
  	"APIURL" => "https://www.flow.cl/api", // Producción EndPoint o Sandbox EndPoint
